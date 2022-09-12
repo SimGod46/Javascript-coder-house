@@ -13,7 +13,15 @@
     top:0px;
     background-color:black;
     padding: 5px 10px;
+    margin-bottom: 20px;
 }
 .banner h1{
     color:whitesmoke;
+}
+.formularioPonderaciones{
+    height:500px;
+    width:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
