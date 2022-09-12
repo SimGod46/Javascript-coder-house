@@ -35,5 +35,11 @@ const resultado = datos_carreras.find((el)=> el.carrera_id === carrera);
 
 let ponderado = ponderacion(nem,ranking,mates,lengua,ciencia);
 let beca_simulada = beca(ponderado);
-console.log("Su puntaje ponderado es de: "+ponderado);
-console.log("Su beca simulada cubre el "+beca_simulada+"% de su carrera de "+resultado.carrera);
+
+let resultadoDOM = document.getElementById("resultadoSimulacion");
+resultadoDOM.innerHTML = "<p>Su puntaje ponderado es de: "+ponderado+"</p><p>Su beca simulada cubre el "+beca_simulada+"% de su carrera de <strong>"+resultado.carrera+"</strong></p>" ;
+if(beca_simulada> 0){
+    let felicitacion = document.createElement("div");
+    felicitacion.innerHTML = "<h2>FELICITACIONES</h2><p>Tu puntaje simulado te hace elegible  para una beca, para más información visita la secciones de \"Financiamiento\"</p>";
+    document.querySelector("main").appendChild(felicitacion);
+}
