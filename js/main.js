@@ -77,6 +77,8 @@ let datos_carreras =[
     {carrera_id:3, carrera: "Ingeniería", ponderacion: [.1, .25, .2,  .1,  .2 ], beca_puntaje:[750, 700, 650], beca_porcentaje:[90,  85, 75]}
 ];
 
+fetch("./datos_carreras.json").then((response)=>response.json()).then((data)=>console.log(data));
+
 /* Utilización del session storage para almacenar examnes y/o ensayos anteriores realizados por la persona*/
 let inicioSesion = document.getElementById("loginBtn");
 inicioSesion.onclick = cuadroLogin;
